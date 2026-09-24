@@ -1,0 +1,94 @@
+# Java I — Pasaporta digjitale dhe GitHub
+
+## Çfarë realizova
+
+Një pasaportë digjitale për **Dren Ylberin**, personazh i sajuar që kandidon si
+udhërrëfyes i kampusit imagjinar. Të gjitha të dhënat janë të shpikura.
+
+| Skedari | Përmbajtja |
+|---|---|
+| `index.html` | `lang="sq"`, `charset`, `viewport`, titull, një `h1`, prezantim, listë me 3 aftësi dhe lidhje relative te `rreth.html` |
+| `rreth.html` | Histori e shkurtër e personazhit dhe lidhja e kthimit te `index.html` |
+| `kontakt.html` | Sfida e transferimit: faqe kontakti, e lidhur nga të dyja faqet ekzistuese |
+| `style.css` | Stili i përbashkët për të tria faqet |
+
+## Hapat e hapjes
+
+1. Klono repository-n dhe hyr në folderin `JavaI`:
+
+   ```sh
+   git clone https://github.com/gjergjquni/fshmn-programiminewww-gjergjquni.git
+   cd fshmn-programiminewww-gjergjquni/JavaI
+   ```
+
+2. Nis një server lokal (kërkohet Python 3):
+
+   ```sh
+   python -m http.server 8000
+   ```
+
+3. Hap në shfletues: <http://localhost:8000/index.html>
+
+Alternativë: hap `index.html` me zgjerimin *Live Server* në VS Code / Cursor.
+
+## Para kodimit: hyrjet, daljet dhe rastet
+
+- **Hyrja:** URL-ja që shtyp përdoruesi ose lidhja që klikon.
+- **Dalja:** dokumenti HTML që kthen serveri, me status HTTP.
+- **Rast normal:** hapet `index.html`, klikohet "Rreth Drenit", hapet `rreth.html`.
+- **Rast kufitar 1:** kthimi nga `rreth.html` te `index.html` — lidhja relative duhet të funksionojë nga çdo faqe.
+- **Rast kufitar 2:** kërkesë për një skedar që s'ekziston — serveri duhet të kthejë `404`, jo një faqe boshe.
+
+## Testet: hyrje → rezultat i pritur → rezultat i marrë
+
+Testuar me `python -m http.server 8000` në `127.0.0.1`.
+
+| # | Hyrje | Rezultati i pritur | Rezultati i marrë |
+|---|---|---|---|
+| 1 | `GET /index.html` | `200 OK`, faqja shfaq h1, prezantimin dhe 3 aftësi | `200 OK` |
+| 2 | Klik "Rreth Drenit" në `index.html` → `GET /rreth.html` | `200 OK`, shfaqet historia | `200 OK` |
+| 3 | Klik "Kthehu te pasaporta" në `rreth.html` → `GET /index.html` | `200 OK`, kthehet te pasaporta | `200 OK` |
+| 4 | Klik "Kontakt" nga `index.html` dhe nga `rreth.html` → `GET /kontakt.html` | `200 OK` nga të dyja faqet | `200 OK` |
+| 5 | `GET /style.css` | `200 OK`, stili ngarkohet | `200 OK` |
+| 6 | `GET /nuk-ekziston.html` (rast kufitar) | `404 Not Found` | `404 File not found` |
+
+Të gjitha lidhjet vajtje/kthim funksionojnë; asnjë lidhje nuk jep 404.
+
+## DevTools → Network
+
+Dokumenti i hapur përmes serverit lokal (rreshti i parë në panelin *Network*):
+
+| Fusha | Vlera |
+|---|---|
+| **URL** | `http://127.0.0.1:8000/index.html` |
+| **Metoda** | `GET` |
+| **Statusi** | `200 OK` |
+
+Pas dokumentit shfaqet edhe një kërkesë `GET http://127.0.0.1:8000/style.css` me status `200`, sepse
+shfletuesi e lexon `<link rel="stylesheet">` dhe kërkon stilin veçmas.
+
+## Reflektim individual
+
+**Cili ndryshim është ruajtur lokalisht por ende nuk shihet në GitHub?**
+
+Çdo ndryshim që është bërë `git commit` por jo ende `git push`. Në këtë detyrë, pas komandës
+`git commit -m "JavaI: realizimi dhe testet"`, skedarët `index.html`, `rreth.html`, `kontakt.html`,
+`style.css` dhe ky `README.md` ekzistonin në historinë lokale të repository-t (`.git`), por GitHub-i
+ende tregonte vetëm commit-in e strukturës me folderët `JavaI`–`JavaXIV`. Vetëm pas `git push` ata
+u shfaqën në GitHub.
+
+Dallimi mes tri gjendjeve:
+
+- **Skedar lokal** — ekziston vetëm në diskun tim; Git-i e sheh si *untracked* ose *modified*. Nëse
+  fshihet disku, humbet.
+- **Commit** — një fotografi e ruajtur në historinë lokale të repository-t. Mund të kthehem te ai
+  version, por ende askush tjetër nuk e sheh dhe GitHub-i nuk e ka.
+- **Push** — commit-et lokale dërgohen te remote-i (`origin`). Vetëm tani ndryshimi shihet në GitHub
+  dhe mund të dorëzohet në Classroom.
+
+## Deklarimi i AI-së dhe burimeve
+
+- Struktura e skedarëve u nis nga skeleti `Fillimi/` që dha profesori.
+- Për ndërtimin e faqeve, README-n dhe komandat e Git-it u përdor asistenti AI (Cursor). Testet me
+  serverin lokal u ekzekutuan realisht dhe rezultatet e shënuara më sipër janë ato të marra.
+- Burime: kap. 1–3 të librit të lëndës; dokumentacioni i `python -m http.server`.
