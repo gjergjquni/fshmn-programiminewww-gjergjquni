@@ -2,8 +2,8 @@
 
 ## Çfarë realizova
 
-Një pasaportë digjitale për **Dren Ylberin**, personazh i sajuar që kandidon si
-udhërrëfyes i kampusit imagjinar. Të gjitha të dhënat janë të shpikura.
+Një pasaportë digjitale për **Gjergj Çunin**, në rolin e një personazhi që kandidon si
+udhërrëfyes i kampusit imagjinar. Historia, aftësitë dhe të dhënat e kontaktit janë të sajuara.
 
 | Skedari | Përmbajtja |
 |---|---|
@@ -35,7 +35,7 @@ Alternativë: hap `index.html` me zgjerimin *Live Server* në VS Code / Cursor.
 
 - **Hyrja:** URL-ja që shtyp përdoruesi ose lidhja që klikon.
 - **Dalja:** dokumenti HTML që kthen serveri, me status HTTP.
-- **Rast normal:** hapet `index.html`, klikohet "Rreth Drenit", hapet `rreth.html`.
+- **Rast normal:** hapet `index.html`, klikohet "Rreth Gjergjit", hapet `rreth.html`.
 - **Rast kufitar 1:** kthimi nga `rreth.html` te `index.html` — lidhja relative duhet të funksionojë nga çdo faqe.
 - **Rast kufitar 2:** kërkesë për një skedar që s'ekziston — serveri duhet të kthejë `404`, jo një faqe boshe.
 
@@ -46,7 +46,7 @@ Testuar me `python -m http.server 8000` në `127.0.0.1`.
 | # | Hyrje | Rezultati i pritur | Rezultati i marrë |
 |---|---|---|---|
 | 1 | `GET /index.html` | `200 OK`, faqja shfaq h1, prezantimin dhe 3 aftësi | `200 OK` |
-| 2 | Klik "Rreth Drenit" në `index.html` → `GET /rreth.html` | `200 OK`, shfaqet historia | `200 OK` |
+| 2 | Klik "Rreth Gjergjit" në `index.html` → `GET /rreth.html` | `200 OK`, shfaqet historia | `200 OK` |
 | 3 | Klik "Kthehu te pasaporta" në `rreth.html` → `GET /index.html` | `200 OK`, kthehet te pasaporta | `200 OK` |
 | 4 | Klik "Kontakt" nga `index.html` dhe nga `rreth.html` → `GET /kontakt.html` | `200 OK` nga të dyja faqet | `200 OK` |
 | 5 | `GET /style.css` | `200 OK`, stili ngarkohet | `200 OK` |
