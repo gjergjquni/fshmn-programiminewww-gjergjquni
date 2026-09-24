@@ -1,4 +1,4 @@
-# Java I — Pasaporta digjitale dhe GitHub
+# Java I: Pasaporta digjitale dhe GitHub
 
 ## Çfarë realizova
 
@@ -36,8 +36,8 @@ Alternativë: hap `index.html` me zgjerimin *Live Server* në VS Code / Cursor.
 - **Hyrja:** URL-ja që shtyp përdoruesi ose lidhja që klikon.
 - **Dalja:** dokumenti HTML që kthen serveri, me status HTTP.
 - **Rast normal:** hapet `index.html`, klikohet "Rreth Gjergjit", hapet `rreth.html`.
-- **Rast kufitar 1:** kthimi nga `rreth.html` te `index.html` — lidhja relative duhet të funksionojë nga çdo faqe.
-- **Rast kufitar 2:** kërkesë për një skedar që s'ekziston — serveri duhet të kthejë `404`, jo një faqe boshe.
+- **Rast kufitar 1:** kthimi nga `rreth.html` te `index.html`. Lidhja relative duhet të funksionojë nga çdo faqe.
+- **Rast kufitar 2:** kërkesë për një skedar që s'ekziston. Serveri duhet të kthejë `404`, jo një faqe boshe.
 
 ## Testet: hyrje → rezultat i pritur → rezultat i marrë
 
@@ -74,16 +74,16 @@ shfletuesi e lexon `<link rel="stylesheet">` dhe kërkon stilin veçmas.
 Çdo ndryshim që është bërë `git commit` por jo ende `git push`. Në këtë detyrë, pas komandës
 `git commit -m "JavaI: realizimi dhe testet"`, skedarët `index.html`, `rreth.html`, `kontakt.html`,
 `style.css` dhe ky `README.md` ekzistonin në historinë lokale të repository-t (`.git`), por GitHub-i
-ende tregonte vetëm commit-in e strukturës me folderët `JavaI`–`JavaXIV`. Vetëm pas `git push` ata
+ende tregonte vetëm commit-in e strukturës me folderët nga `JavaI` deri `JavaXIV`. Vetëm pas `git push` ata
 u shfaqën në GitHub.
 
 Dallimi mes tri gjendjeve:
 
-- **Skedar lokal** — ekziston vetëm në diskun tim; Git-i e sheh si *untracked* ose *modified*. Nëse
-  fshihet disku, humbet.
-- **Commit** — një fotografi e ruajtur në historinë lokale të repository-t. Mund të kthehem te ai
-  version, por ende askush tjetër nuk e sheh dhe GitHub-i nuk e ka.
-- **Push** — commit-et lokale dërgohen te remote-i (`origin`). Vetëm tani ndryshimi shihet në GitHub
+- **Skedar lokal:** ekziston vetëm në diskun tim dhe Git-i e sheh si *untracked* ose *modified*. Nëse
+  prishet disku, humbet.
+- **Commit:** një fotografi e ruajtur në historinë lokale të repository-t. Mund të kthehem te ai
+  version, por askush tjetër nuk e sheh ende dhe GitHub-i nuk e ka.
+- **Push:** commit-et lokale dërgohen te remote-i (`origin`). Vetëm tani ndryshimi shihet në GitHub
   dhe mund të dorëzohet në Classroom.
 
 ## Deklarimi i AI-së dhe burimeve
@@ -91,4 +91,4 @@ Dallimi mes tri gjendjeve:
 - Struktura e skedarëve u nis nga skeleti `Fillimi/` që dha profesori.
 - Për ndërtimin e faqeve, README-n dhe komandat e Git-it u përdor asistenti AI (Cursor). Testet me
   serverin lokal u ekzekutuan realisht dhe rezultatet e shënuara më sipër janë ato të marra.
-- Burime: kap. 1–3 të librit të lëndës; dokumentacioni i `python -m http.server`.
+- Burime: kapitujt 1 deri 3 të librit të lëndës dhe dokumentacioni i `python -m http.server`.
