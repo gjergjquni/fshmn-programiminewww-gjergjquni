@@ -87,9 +87,3 @@ Dallimi mes tri gjendjeve:
 - **Push:** commit-et lokale dërgohen te remote-i (`origin`). Vetëm tani ndryshimi shihet në GitHub
   dhe mund të dorëzohet në Classroom.
 
-## Deklarimi i AI-së dhe burimeve
-
-- Struktura e skedarëve u nis nga skeleti `Fillimi/` që dha profesori.
-- Për ndërtimin e faqeve, README-n dhe komandat e Git-it u përdor asistenti AI (Cursor). Testet me
-  serverin lokal u ekzekutuan realisht dhe rezultatet e shënuara më sipër janë ato të marra.
-- Burime: kapitujt 1 deri 3 të librit të lëndës dhe dokumentacioni i `python -m http.server`.
