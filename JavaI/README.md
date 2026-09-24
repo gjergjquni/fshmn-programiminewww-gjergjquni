@@ -2,14 +2,15 @@
 
 ## Çfarë realizova
 
-Një pasaportë digjitale për **Gjergj Çunin**, në rolin e një personazhi që kandidon si
-udhërrëfyes i kampusit imagjinar. Historia, aftësitë dhe të dhënat e kontaktit janë të sajuara.
+Pasaporta digjitale e Gjergj Çunit, student i Shkencave Kompjuterike në UP, si kandidat për
+udhërrëfyes të kampusit. Të dhënat janë marrë nga CV-ja ime; nga kontakti janë vendosur vetëm
+email-i studentor dhe GitHub-i, sepse repository-a është publik.
 
 | Skedari | Përmbajtja |
 |---|---|
 | `index.html` | `lang="sq"`, `charset`, `viewport`, titull, një `h1`, prezantim, listë me 3 aftësi dhe lidhje relative te `rreth.html` |
-| `rreth.html` | Histori e shkurtër e personazhit dhe lidhja e kthimit te `index.html` |
-| `kontakt.html` | Sfida e transferimit: faqe kontakti, e lidhur nga të dyja faqet ekzistuese |
+| `rreth.html` | Historia ime e shkurtër (studimet, RuajMençur, Erasmus, kërkimi në EEML) dhe lidhja e kthimit te `index.html` |
+| `kontakt.html` | Sfida e transferimit: email, GitHub dhe lidhjet e projekteve, e lidhur nga të dyja faqet ekzistuese |
 | `style.css` | Stili i përbashkët për të tria faqet |
 
 ## Hapat e hapjes
