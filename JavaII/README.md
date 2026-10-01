@@ -64,9 +64,4 @@ Testuar me `python -m http.server 8000` në `127.0.0.1`.
 Pas dokumentit shfaqen `GET /style.css` dhe tre `GET /images/*.png` me status `200`.
 Kliku me `#…` nuk hap kërkesë të re HTTP për faqe tjetër; ndryshon vetëm fragmenti i URL-së.
 
-## Reflektim individual
 
-**Cili ndryshim është ruajtur lokalisht por ende nuk shihet në GitHub?**
-
-Çdo ndryshim i kommittuar por jo i push-uar. Pas `git commit`, skedarët e `JavaII`
-jetojnë në historinë lokale; në GitHub shihen vetëm pas `git push`.
