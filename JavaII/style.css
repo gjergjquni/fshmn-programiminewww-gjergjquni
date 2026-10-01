@@ -92,12 +92,31 @@ a {
 }
 
 .card .story {
-  text-decoration: none;
+  color: #0b57d0;
 }
-.card .story::before {
+
+.card .story summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.card .story summary::-webkit-details-marker {
+  display: none;
+}
+
+.card .story summary::before {
   content: "▶ ";
   color: #1f2933;
   font-size: 0.75rem;
+}
+
+.card .story[open] summary::before {
+  content: "▼ ";
+}
+
+.card .story p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
 }
 
 footer {
