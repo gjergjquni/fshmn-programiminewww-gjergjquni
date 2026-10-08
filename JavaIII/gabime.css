@@ -1,0 +1,20 @@
+/*
+ * Versioni i diagnostikuar:
+ * - #poster fitonte ndaj .poster për shkak të specifikës më të lartë.
+ * - Teksti i bardhë mbi sfondin e bardhë nuk lexohej.
+ * - Gjerësia fikse dhe padding-u krijonin overflow.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.poster {
+  width: 100%;
+  max-width: 700px;
+  padding: clamp(1rem, 5vw, 5rem);
+  color: #17263c;
+  background: #ffffff;
+}
