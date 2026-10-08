@@ -1,18 +1,18 @@
 :root {
-  --navy: #0b1739;
-  --navy-light: #152752;
-  --blue: #3366ff;
-  --blue-dark: #244ed1;
-  --mint: #4de1c1;
-  --background: #f5f7fb;
+  --navy: #1d1d1d;
+  --navy-light: #333333;
+  --blue: #d71920;
+  --blue-dark: #a90f15;
+  --mint: #d71920;
+  --background: #f5f5f3;
   --surface: #ffffff;
-  --text: #172033;
-  --muted: #65708a;
-  --border: #e1e6f0;
-  --success-bg: #e8faf5;
-  --success: #087b63;
+  --text: #202020;
+  --muted: #696969;
+  --border: #ddddda;
+  --success-bg: #e9f5ee;
+  --success: #26734d;
   --radius: 1.25rem;
-  --shadow: 0 16px 45px rgb(11 23 57 / 9%);
+  --shadow: 0 16px 45px rgb(29 29 29 / 11%);
 }
 
 *,
@@ -51,7 +51,7 @@ a {
   left: 0.75rem;
   z-index: 10;
   padding: 0.65rem 1rem;
-  color: var(--navy);
+  color: white;
   background: var(--mint);
   border-radius: 0.5rem;
   font-weight: 700;
@@ -65,10 +65,10 @@ a {
 .hero {
   position: relative;
   overflow: hidden;
-  color: white;
+  color: var(--text);
   background:
-    radial-gradient(circle at 82% 25%, rgb(77 225 193 / 18%), transparent 22rem),
-    linear-gradient(135deg, var(--navy), var(--navy-light));
+    radial-gradient(circle at 82% 25%, rgb(215 25 32 / 9%), transparent 22rem),
+    linear-gradient(135deg, #ffffff, #f0f0ed);
 }
 
 .hero::after {
@@ -77,7 +77,7 @@ a {
   bottom: -11rem;
   width: 25rem;
   height: 25rem;
-  border: 1px solid rgb(255 255 255 / 10%);
+  border: 1px solid rgb(32 32 32 / 9%);
   border-radius: 50%;
   content: "";
 }
@@ -89,7 +89,7 @@ a {
   align-items: center;
   justify-content: space-between;
   min-height: 5rem;
-  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  border-bottom: 1px solid rgb(32 32 32 / 12%);
 }
 
 .brand,
@@ -109,7 +109,7 @@ a {
   overflow: hidden;
   border: 2px solid var(--mint);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgb(77 225 193 / 12%);
+  box-shadow: 0 0 0 3px rgb(215 25 32 / 11%);
 }
 
 .brand-photo {
@@ -122,7 +122,7 @@ a {
 
 .github-link {
   padding: 0.55rem 0.85rem;
-  border: 1px solid rgb(255 255 255 / 25%);
+  border: 1px solid rgb(32 32 32 / 22%);
   border-radius: 0.65rem;
   font-size: 0.9rem;
   transition:
@@ -131,8 +131,9 @@ a {
 }
 
 .github-link:hover {
-  background: rgb(255 255 255 / 10%);
-  border-color: rgb(255 255 255 / 45%);
+  color: white;
+  background: var(--blue);
+  border-color: var(--blue);
 }
 
 .hero-content {
@@ -168,8 +169,8 @@ a {
   justify-content: flex-start;
   gap: 0.1rem;
   padding: 0.65rem 0.8rem 1.5rem;
-  color: var(--navy);
-  background: linear-gradient(135deg, #67edd1, var(--mint));
+  color: white;
+  background: linear-gradient(135deg, #ed343b, var(--blue-dark));
   clip-path: polygon(0 0, 100% 0, 100% 60%, 67% 60%, 50% 100%, 33% 60%, 0 60%);
   filter: drop-shadow(0 10px 15px rgb(0 0 0 / 25%));
   font-size: 0.8rem;
@@ -182,7 +183,7 @@ a {
 }
 
 .scroll-cue:hover {
-  color: var(--navy);
+  color: white;
   filter: drop-shadow(0 14px 20px rgb(0 0 0 / 35%)) brightness(1.06);
   transform: translateY(-0.15rem);
   animation-play-state: paused;
@@ -199,7 +200,7 @@ a {
 }
 
 .scroll-cue-arrow {
-  color: var(--navy);
+  color: white;
   font-size: 1.1rem;
   line-height: 1;
 }
@@ -246,7 +247,7 @@ h1 {
 .intro {
   max-width: 42rem;
   margin-bottom: 2.4rem;
-  color: #cbd4e9;
+  color: #555555;
   font-size: clamp(1rem, 2vw, 1.18rem);
 }
 
@@ -270,7 +271,7 @@ h1 {
 }
 
 .summary span {
-  color: #aebbd5;
+  color: #6a6a6a;
   font-size: 0.84rem;
 }
 
@@ -326,7 +327,7 @@ h2 {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 8px 25px rgb(11 23 57 / 5%);
+  box-shadow: 0 8px 25px rgb(29 29 29 / 6%);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -334,7 +335,7 @@ h2 {
 }
 
 .assignment-card:hover {
-  border-color: #c7d2ea;
+  border-color: #e3aaad;
   box-shadow: var(--shadow);
   transform: translateY(-0.3rem);
 }
@@ -371,7 +372,7 @@ h2 {
   margin-block: 2rem 1.5rem;
   place-items: center;
   color: var(--blue);
-  background: #edf1ff;
+  background: #fdebec;
   border-radius: 1rem;
   font-size: 1.1rem;
   font-weight: 900;
@@ -419,29 +420,29 @@ h2 {
   gap: 1.5rem;
   margin-top: 1.25rem;
   padding: 1.5rem 1.75rem;
-  background: #ebeff6;
-  border: 1px dashed #c9d0df;
+  background: #ececea;
+  border: 1px dashed #c8c8c4;
   border-radius: var(--radius);
 }
 
 .upcoming h2 {
-  color: #59647b;
+  color: #555555;
   font-size: 1.25rem;
 }
 
 .upcoming .eyebrow {
   margin-bottom: 0.35rem;
-  color: #7b8599;
+  color: #777777;
 }
 
 .pending-status {
   flex: none;
-  color: #687286;
-  background: #dfe4ed;
+  color: #5d5d5d;
+  background: #ddddda;
 }
 
 footer {
-  color: #9da9c1;
+  color: #c8c8c8;
   background: var(--navy);
 }
 
