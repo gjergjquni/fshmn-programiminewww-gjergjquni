@@ -1,4 +1,4 @@
-# JavaIII — Klubi i debatit
+# JavaIII  Klubi i debatit
 
 Ky folder përmban zgjidhjen e detyrës së javës së tretë, “Klinika e CSS:
 shpëto afishen”. Projekti paraqet një afishe responsive për Klubin e debatit.
@@ -14,11 +14,11 @@ shpëto afishen”. Projekti paraqet një afishe responsive për Klubin e debati
 
 ## Skedarët
 
-- `index.html` — struktura dhe përmbajtja semantike e afishes.
-- `style.css` — dizajni responsive, variablat, box model-i dhe gjendjet
+- `index.html`  struktura dhe përmbajtja semantike e afishes.
+- `style.css`  dizajni responsive, variablat, box model-i dhe gjendjet
   `hover`/`focus-visible`.
-- `gabime.css` — versioni i korrigjuar i konfliktit të specifikës dhe overflow-it.
-- `README.md` — dokumentimi dhe udhëzimet për ekzekutim.
+- `gabime.css`  versioni i korrigjuar i konfliktit të specifikës dhe overflow-it.
+- `README.md`  dokumentimi dhe udhëzimet për ekzekutim.
 
 ## Funksionalitetet
 
