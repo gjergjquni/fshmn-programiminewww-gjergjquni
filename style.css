@@ -144,33 +144,50 @@ a {
 .scroll-cue {
   position: absolute;
   right: max(1.25rem, calc((100vw - 70rem) / 2));
-  bottom: 1.5rem;
+  bottom: 1.25rem;
   z-index: 2;
   display: flex;
+  width: 9.5rem;
+  height: 5rem;
   align-items: center;
-  gap: 0.7rem;
-  color: #cbd4e9;
-  font-size: 0.78rem;
-  font-weight: 700;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.1rem;
+  padding: 0.65rem 0.8rem 1.5rem;
+  color: var(--navy);
+  background: linear-gradient(135deg, #67edd1, var(--mint));
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 67% 60%, 50% 100%, 33% 60%, 0 60%);
+  filter: drop-shadow(0 10px 15px rgb(0 0 0 / 25%));
+  font-size: 0.8rem;
+  font-weight: 800;
   text-decoration: none;
-  transition: color 160ms ease;
+  animation: point-down 2s ease-in-out infinite;
+  transition:
+    filter 160ms ease,
+    transform 160ms ease;
 }
 
 .scroll-cue:hover {
-  color: white;
+  color: var(--navy);
+  filter: drop-shadow(0 14px 20px rgb(0 0 0 / 35%)) brightness(1.06);
+  transform: translateY(-0.15rem);
+  animation-play-state: paused;
+}
+
+.scroll-cue:active {
+  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 20%));
+  transform: translateY(0.1rem);
+}
+
+.scroll-cue:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 5px;
 }
 
 .scroll-cue-arrow {
-  display: grid;
-  width: 2.6rem;
-  height: 2.6rem;
-  place-items: center;
   color: var(--navy);
-  background: var(--mint);
-  border-radius: 50%;
-  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
-  font-size: 1.25rem;
-  animation: point-down 1.8s ease-in-out infinite;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 @keyframes point-down {
@@ -180,7 +197,7 @@ a {
   }
 
   50% {
-    transform: translateY(0.3rem);
+    transform: translateY(0.25rem);
   }
 }
 
@@ -484,10 +501,7 @@ a:focus-visible {
   .github-link,
   .button,
   .scroll-cue {
-    transition: none;
-  }
-
-  .scroll-cue-arrow {
     animation: none;
+    transition: none;
   }
 }
