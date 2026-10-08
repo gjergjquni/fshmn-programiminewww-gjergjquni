@@ -141,6 +141,49 @@ a {
   padding-block: clamp(4rem, 10vw, 7rem) clamp(5rem, 11vw, 8rem);
 }
 
+.scroll-cue {
+  position: absolute;
+  right: max(1.25rem, calc((100vw - 70rem) / 2));
+  bottom: 1.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #cbd4e9;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.scroll-cue:hover {
+  color: white;
+}
+
+.scroll-cue-arrow {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  color: var(--navy);
+  background: var(--mint);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+  font-size: 1.25rem;
+  animation: point-down 1.8s ease-in-out infinite;
+}
+
+@keyframes point-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(0.3rem);
+  }
+}
+
 .eyebrow {
   margin: 0 0 0.65rem;
   color: var(--blue);
@@ -425,6 +468,11 @@ a:focus-visible {
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .scroll-cue {
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -434,7 +482,12 @@ a:focus-visible {
 
   .assignment-card,
   .github-link,
-  .button {
+  .button,
+  .scroll-cue {
     transition: none;
+  }
+
+  .scroll-cue-arrow {
+    animation: none;
   }
 }
