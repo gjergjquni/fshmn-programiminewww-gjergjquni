@@ -101,15 +101,14 @@ a {
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
+.brand-photo {
+  display: block;
   width: 2.5rem;
   height: 2.5rem;
-  place-items: center;
-  color: var(--navy);
-  background: var(--mint);
-  border-radius: 0.7rem;
-  font-size: 0.8rem;
+  object-fit: cover;
+  border: 2px solid var(--mint);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgb(77 225 193 / 12%);
 }
 
 .github-link {
