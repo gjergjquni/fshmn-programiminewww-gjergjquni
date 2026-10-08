@@ -8,6 +8,6 @@ Detyrat javore të lëndës *Programimi në WWW* (FShMN). Çdo javë ka folderin
 | [JavaI](JavaI/) | Pasaporta digjitale dhe GitHub | Dorëzuar |
 | [JavaII](JavaII/) | Muzeu i sendeve | Dorëzuar |
 | [JavaIII](JavaIII/) | Klubi i debatit | Dorëzuar |
-| JavaIV – JavaXIV |  | Në pritje |
+| JavaIV deri në JavaXIV |  | Në pritje |
 
 Udhëzimet për hapjen e çdo detyre janë në `README.md`-në e folderit përkatës.
