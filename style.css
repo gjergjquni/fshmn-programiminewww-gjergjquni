@@ -64,6 +64,7 @@ a {
 
 .hero {
   position: relative;
+  min-height: calc(100vh - 4.5rem);
   overflow: hidden;
   color: white;
   background:
@@ -130,7 +131,11 @@ a {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-block: clamp(4rem, 10vw, 7rem) clamp(5rem, 11vw, 8rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(19rem, 0.8fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+  padding-block: clamp(4rem, 10vw, 7rem);
 }
 
 .eyebrow {
@@ -154,208 +159,118 @@ p {
 }
 
 h1 {
-  max-width: 52rem;
+  max-width: 42rem;
   margin-bottom: 1rem;
-  font-size: clamp(2.6rem, 7vw, 5.1rem);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
   line-height: 1.05;
   letter-spacing: -0.045em;
 }
 
 .intro {
-  max-width: 42rem;
-  margin-bottom: 2.4rem;
+  max-width: 34rem;
+  margin-bottom: 0;
   color: #cbd4e9;
   font-size: clamp(1rem, 2vw, 1.18rem);
 }
 
-.summary {
+.assignments {
+  padding: 1.5rem;
+  color: var(--text);
+  background: rgb(255 255 255 / 97%);
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 70px rgb(0 0 0 / 22%);
+}
+
+.assignments-heading {
   display: flex;
-  flex-wrap: wrap;
-  gap: clamp(1.5rem, 5vw, 4rem);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.summary li {
-  display: grid;
-  gap: 0.1rem;
-}
-
-.summary strong {
-  font-size: 1.55rem;
-  line-height: 1.2;
-}
-
-.summary span {
-  color: #aebbd5;
-  font-size: 0.84rem;
-}
-
-.main-content {
-  padding-block: clamp(3.5rem, 8vw, 6rem);
-}
-
-.section-heading {
-  display: flex;
-  align-items: end;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
-h2 {
+.assignments h2 {
   margin-bottom: 0;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: 1.35rem;
   line-height: 1.15;
-  letter-spacing: -0.025em;
 }
 
-.status-legend {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.25rem;
-  color: var(--muted);
-  font-size: 0.87rem;
+.assignments .eyebrow {
+  margin-bottom: 0.3rem;
 }
 
-.status-legend span {
-  width: 0.55rem;
-  height: 0.55rem;
-  background: var(--success);
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem var(--success-bg);
-}
-
-.assignment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.assignment-card {
-  position: relative;
-  display: flex;
-  min-height: 26rem;
-  flex-direction: column;
-  padding: 1.5rem;
-  overflow: hidden;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 25px rgb(11 23 57 / 5%);
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
-}
-
-.assignment-card:hover {
-  border-color: #c7d2ea;
-  box-shadow: var(--shadow);
-  transform: translateY(-0.3rem);
-}
-
-.card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-.week {
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.status,
-.pending-status {
-  padding: 0.3rem 0.65rem;
-  color: var(--success);
-  background: var(--success-bg);
+.count {
+  padding: 0.35rem 0.65rem;
+  color: var(--blue);
+  background: #edf1ff;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 800;
 }
 
-.card-icon {
+.assignment-links {
   display: grid;
-  width: 4rem;
-  height: 4rem;
-  margin-block: 2rem 1.5rem;
-  place-items: center;
-  color: var(--blue);
-  background: #edf1ff;
-  border-radius: 1rem;
-  font-size: 1.1rem;
-  font-weight: 900;
+  gap: 0.65rem;
 }
 
-.assignment-card h3 {
-  margin-bottom: 0.7rem;
-  font-size: 1.35rem;
-  line-height: 1.25;
-}
-
-.assignment-card p {
-  margin-bottom: 1.6rem;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-.button {
+.assignment-links a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: auto;
-  padding: 0.8rem 1rem;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.assignment-links a:hover {
   color: white;
   background: var(--blue);
-  border-radius: 0.7rem;
-  font-size: 0.9rem;
-  font-weight: 800;
-  text-decoration: none;
-  transition: background-color 160ms ease;
+  border-color: var(--blue);
+  transform: translateX(0.2rem);
 }
 
-.button:hover {
-  background: var(--blue-dark);
+.assignment-links a > span:first-child {
+  display: grid;
+  color: var(--muted);
+  font-size: 0.8rem;
 }
 
-.button span {
+.assignment-links a:hover > span:first-child {
+  color: #dfe6ff;
+}
+
+.assignment-links strong {
+  color: var(--text);
+  font-size: 0.97rem;
+}
+
+.assignment-links a:hover strong {
+  color: white;
+}
+
+.assignment-links a > span:last-child {
+  color: var(--blue);
   font-size: 1.2rem;
 }
 
-.upcoming {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-  padding: 1.5rem 1.75rem;
-  background: #ebeff6;
-  border: 1px dashed #c9d0df;
-  border-radius: var(--radius);
+.assignment-links a:hover > span:last-child {
+  color: white;
 }
 
-.upcoming h2 {
-  color: #59647b;
-  font-size: 1.25rem;
-}
-
-.upcoming .eyebrow {
-  margin-bottom: 0.35rem;
-  color: #7b8599;
-}
-
-.pending-status {
-  flex: none;
-  color: #687286;
-  background: #dfe4ed;
+.pending {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  text-align: center;
 }
 
 footer {
@@ -385,12 +300,13 @@ a:focus-visible {
 }
 
 @media (max-width: 50rem) {
-  .assignment-grid {
-    grid-template-columns: 1fr;
+  .hero {
+    min-height: auto;
   }
 
-  .assignment-card {
-    min-height: auto;
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
@@ -407,13 +323,7 @@ a:focus-visible {
     font-size: 1rem;
   }
 
-  .section-heading,
   .footer-content {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .upcoming {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -424,9 +334,9 @@ a:focus-visible {
     scroll-behavior: auto;
   }
 
-  .assignment-card,
+  .assignment-links a,
   .github-link,
-  .button {
+  .skip-link {
     transition: none;
   }
 }
