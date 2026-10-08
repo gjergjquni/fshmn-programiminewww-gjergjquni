@@ -143,8 +143,9 @@ a {
 
 .scroll-cue {
   position: absolute;
-  right: max(1.25rem, calc((100vw - 70rem) / 2));
-  bottom: 1.25rem;
+  top: 60%;
+  right: max(1.5rem, calc((100vw - 70rem) / 2));
+  bottom: auto;
   z-index: 2;
   display: flex;
   width: 9.5rem;
@@ -487,6 +488,7 @@ a:focus-visible {
   }
 
   .scroll-cue {
+    top: auto;
     right: 1rem;
     bottom: 1rem;
   }
