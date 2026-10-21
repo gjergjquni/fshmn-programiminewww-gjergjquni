@@ -413,6 +413,50 @@ h2 {
   font-size: 1.2rem;
 }
 
+.assignment-card--inverted {
+  color: white;
+  background: linear-gradient(160deg, #ed343b, var(--blue-dark));
+  border-color: #a90f15;
+  box-shadow: 0 12px 30px rgb(169 15 21 / 28%);
+}
+
+.assignment-card--inverted:hover {
+  border-color: #7f0b10;
+  box-shadow: 0 18px 40px rgb(169 15 21 / 38%);
+}
+
+.assignment-card--inverted .week {
+  color: rgb(255 255 255 / 78%);
+}
+
+.assignment-card--inverted .status {
+  color: var(--blue-dark);
+  background: white;
+}
+
+.assignment-card--inverted .card-icon {
+  color: var(--blue-dark);
+  background: white;
+}
+
+.assignment-card--inverted h3 {
+  color: white;
+}
+
+.assignment-card--inverted p {
+  color: rgb(255 255 255 / 82%);
+}
+
+.assignment-card--inverted .button {
+  color: var(--blue-dark);
+  background: white;
+}
+
+.assignment-card--inverted .button:hover {
+  color: white;
+  background: var(--navy);
+}
+
 .upcoming {
   display: flex;
   align-items: center;
