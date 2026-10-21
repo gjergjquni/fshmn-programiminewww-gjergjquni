@@ -17,6 +17,7 @@ gjatë javëve të lëndës.
 | [JavaI](JavaI/) | Pasaporta digjitale dhe GitHub | Dorëzuar |
 | [JavaII](JavaII/) | Muzeu i sendeve | Dorëzuar |
 | [JavaIII](JavaIII/) | Klubi i debatit | Dorëzuar |
-| JavaIV – JavaXIV |  | Në pritje |
+| [JavaIV (Testim)](JavaIV%20(Testim)/) | Lista e vullnetarëve | Vlerësuar · 6/6 |
+| JavaV – JavaXIV |  | Në pritje |
 
 Udhëzimet për hapjen e çdo detyre janë në `README.md`-në e folderit përkatës.
