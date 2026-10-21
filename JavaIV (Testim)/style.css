@@ -1,0 +1,10 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 1rem; }
+.members { max-width: 700px; padding: 1rem; border: 2px solid navy; display: grid; gap: 1rem; }
+.members article { display: grid; gap: .5rem; }
+.members h2, .members p { margin: 0; }
+.members p { overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid navy; outline-offset: 3px; }
+@media (min-width: 800px) {
+  .members article { grid-template-columns: 1fr 1fr 1fr; align-items: center; }
+}
