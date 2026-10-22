@@ -79,8 +79,4 @@ Flexbox për menunë: një rresht lidhjesh në një aks, që mbështillet me
 kolonash sipas gjerësisë (1 → 2 → 3), që shprehet drejtpërdrejt me
 `grid-template-columns`.
 
-## Deklarim AI / burime
 
-- Ndihmë nga Cursor për HTML/CSS dhe këtë README, sipas kërkesave të
-  fletës së ushtrimit.
-- Referencë tematike: kap. 6–7 (Flexbox, Grid, media queries).
