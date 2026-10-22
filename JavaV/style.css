@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 1rem;
+  color: #1f2933;
+  background: #f7f9fb;
+  line-height: 1.5;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+header {
+  border-bottom: 3px solid #0b6e5f;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  margin: 0 0 0.25rem;
+  color: #52606d;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* 1. Menu fleksibile — Flexbox */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.menu a {
+  color: #0b57d0;
+}
+
+.menu a:focus,
+.btn:focus {
+  outline: 2px solid #0b6e5f;
+  outline-offset: 2px;
+}
+
+/* 3. Lidhja e detajeve, e dukshme si buton */
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  color: #fff;
+  background: #0b6e5f;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 4. Imazh fleksibël — pa lartësi fikse */
+.flex-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/*
+  2. Grid i kartave:
+  - nën 600 px → 1 kolonë
+  - 600–899 px → 2 kolona
+  - nga 900 px → 3 kolona
+*/
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.card {
+  min-width: 0;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 0.5rem;
+  scroll-margin-top: 1rem;
+}
+
+/* 3–4. Pa lartësi fikse; teksti i gjatë qëndron brenda */
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  overflow-wrap: anywhere;
+}
+
+.category,
+.schedule {
+  margin: 0 0 0.35rem;
+}
+
+.category {
+  color: #0b6e5f;
+  font-weight: 600;
+}
+
+.schedule {
+  color: #52606d;
+}
+
+.detajet {
+  margin-top: 1.5rem;
+}
+
+.detajet article {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 0.5rem;
+  scroll-margin-top: 1rem;
+}
+
+.detajet h2 {
+  margin: 0 0 0.5rem;
+}
+
+.detajet p {
+  margin: 0;
+}
+
+footer {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #d9e2ec;
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

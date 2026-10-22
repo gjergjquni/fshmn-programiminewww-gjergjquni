@@ -18,6 +18,7 @@ gjatë javëve të lëndës.
 | [JavaII](JavaII/) | Muzeu i sendeve | Dorëzuar |
 | [JavaIII](JavaIII/) | Klubi i debatit | Dorëzuar |
 | [JavaIV (Testim)](JavaIV%20(Testim)/) | Lista e vullnetarëve | Vlerësuar · 6/6 |
-| JavaV – JavaXIV |  | Në pritje |
+| [JavaV](JavaV/) | Festivali që përshtatet në çdo ekran | Gati për dorëzim |
+| JavaVI – JavaXIV |  | Në pritje |
 
 Udhëzimet për hapjen e çdo detyre janë në `README.md`-në e folderit përkatës.
